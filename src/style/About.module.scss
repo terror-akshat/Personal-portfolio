@@ -1,0 +1,110 @@
+@import "./../style/variable.scss";
+// body {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+// }
+.About {
+  padding: 50px 8%;
+  &_content {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 70px;
+    &_image {
+      border: 3px solid #ffffff;
+      max-width: 700px;
+      padding: 10px;
+      img {
+        width: 400px;
+        position: relative;
+        height: 400px;
+        // margin-right: 1rem;
+
+        @include breakpoint(md) {
+          width: 400px;
+          height: 400px;
+        }
+      }
+    }
+    &_info {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        color: #ffffff;
+        font-size: 3rem;
+        border-bottom: 2px solid black;
+      }
+      p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: rgb(24, 192, 178);
+        border-bottom: 2px solid black;
+      }
+      &_personal {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        color: aqua;
+        @include breakpoint(md) {
+          display: flex;
+          flex-direction: row;
+          gap: 18.8rem;
+          margin-top: 2rem;
+          line-height: 1.5;
+        }
+      }
+      &_personal1 {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        color: aqua;
+        @include breakpoint(md) {
+          display: flex;
+          flex-direction: row;
+          gap: 7rem;
+        }
+      }
+    }
+
+    @include breakpoint(md) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+  &_skills {
+    width: 100%;
+    margin-top: 10rem;
+    p {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem;
+      color: brown;
+      align-items: center;
+    }
+    &_item {
+      div {
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 2rem;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+        @include breakpoint(md) {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+        }
+        div:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}

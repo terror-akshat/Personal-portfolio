@@ -1,0 +1,17 @@
+@import "./variable.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  // padding: 0;
+}
+
+body {
+  width: 100%;
+  // color: $dark;
+  background: url(./../Images//bg.jpeg);
+
+  // background: linear-gradient(90deg, #feac5e, #c779d0, #4bc0c8);
+}
+#root {
+  height: 100%;
+}

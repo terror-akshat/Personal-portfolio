@@ -1,0 +1,98 @@
+@import "./../style/variable.scss";
+body {
+  // background: no-repeat;
+}
+
+.Home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  margin-top: -2rem;
+  flex-direction: column;
+  //   margin-bottom: 40px;
+  &_content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 7rem;
+    // max-width: 500px;
+    margin-top: 5rem;
+
+    h1 {
+      font-size: 4rem;
+      background: linear-gradient(90deg, #00dbde, #fc00ff);
+      font-family: Poppins;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      transition: 0.6s ease all;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 2rem;
+      background: linear-gradient(90deg, #00dbde, #fc00ff);
+      font-family: Poppins;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 100;
+      transition: 0.6s ease all;
+      line-height: 2.5rem;
+    }
+    &_icon {
+      margin-top: 15px;
+
+      a {
+        padding-left: 20px;
+        background: linear-gradient(90deg, #00dbde, #fc00ff);
+        font-family: Poppins;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15rem;
+    height: 10vh;
+    img {
+      width: 400px;
+      height: 400px;
+      border-radius: 360px;
+      align-items: center;
+      position: absolute;
+      box-shadow: 1px 1px 20px #022530f7, 1px 1px 40px #13b49f8c;
+      margin-top: 9rem;
+      border: 2px solid black;
+
+      animation: moveUpDown 2s ease-in-out infinite;
+      @include breakpoint(md) {
+        transition: 1s ease all;
+        top: -15px;
+        width: 400px;
+        height: 400px;
+        right: 40px;
+      }
+
+      @keyframes moveUpDown {
+        0%,
+        100% {
+          transform: translateY(30);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+      }
+    }
+  }
+  @include breakpoint(md) {
+    // width: auto;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.6s ease all;
+  }
+}
+
+//media queery

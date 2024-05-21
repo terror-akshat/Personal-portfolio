@@ -1,0 +1,28 @@
+// ProgressBar.scss
+.progress-bar-container {
+  width: 70%; // Adjust the width of the progress bar container
+  margin: 20px auto;
+}
+
+.progress-bar {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+// Add some styling for individual skills (optional)
+.progress-bar:nth-child(2n) {
+  background-color: #5cb85c; // Adjust color for even-indexed skills
+}
+
+.progress-bar:nth-child(3n) {
+  background-color: #d9534f; // Adjust color for skills with multiples of 3 index
+}
+.icon {
+  margin-right: 8px; // Adjust spacing between the icon and text
+}
